@@ -43,3 +43,28 @@ Make sure you have the following installed on your machine:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+### 3. Install the required dependencies:
+```
+pip install flask mysql-connector-python flask-cors
+```
+### 4. Open app.py and update the MySQL connection string with your local database credentials (username and password).
+### 5. Start the server:
+```
+python app.py
+```
+## 3. Frontend Setup (React/Vite)
+1. Open a new terminal and navigate to the `Frontend` directory.
+2. Install the Node modules:
+   ```
+   npm install
+   ```
+3. Start the Vite development server:
+   ```
+   npm run dev
+   ```
+# 🔌 Hardware Integration (Future Scope)
+Currently, the application simulates a fingerprint scanner via the web UI. To implement a physical biometric scanner:
+1. Currently, the application simulates a fingerprint scanner via the web UI. To implement a physical biometric scanner:
+2. Install the manufacturer's Python SDK.
+3. Hook the SDK's match event to trigger an HTTP POST request to the `/api/user/<user_id>/checkin` endpoint.
